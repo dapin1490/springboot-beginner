@@ -8,27 +8,26 @@ import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
 @Entity
-public class Article {
+public class Member {
     @Id
     @GeneratedValue
     private Long id;
-
     @Column
-    private String title;
+    private String email;
     @Column
-    private String content;
+    private String pw;
 
-    public Article(Long id, String title, String content) {
-        this.title = title;
-        this.content = content;
+    public Member(Long id, String email, String pw) {
+        this.email = email;
+        this.pw = pw;
     }
 
     @Override
     public String toString() {
-        return "Article{" +
+        return "Member{" +
                 "id=" + id +
-                ", title='" + title + '\'' +
-                ", content='" + content + '\'' +
+                ", email='" + email + '\'' +
+                ", pw='" + pw + '\'' +
                 '}';
     }
 }
